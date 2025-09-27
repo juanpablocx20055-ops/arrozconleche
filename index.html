@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manjar — Delicias Caseras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #FFEFBA;
+      --bg2: #FFFFFF;
+      --accent: #FF7A59;
+      --muted: #6B6B6B;
+      --card: rgba(255,255,255,0.75);
+      --glass: rgba(255,255,255,0.25);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background: linear-gradient(135deg,var(--bg1) 0%, #FFD6C0 30%, #FFECEC 60%); color:#222}
+    .wrap{max-width:1120px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:76px;height:76px;border-radius:18px;background:linear-gradient(135deg,#fff7f2,#fff2ee);display:grid;place-items:center;font-weight:800;color:var(--accent);font-size:26px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    h1{margin:0;font-size:28px;letter-spacing:-0.4px}
+    p.lead{margin:0;color:var(--muted)}
+
+    .hero{margin-top:22px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));border-radius:18px;padding:26px;display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:center;box-shadow:0 10px 30px rgba(15,15,15,0.05)}
+    .hero-left h2{margin:0;font-size:22px}
+    .hero-left p{color:var(--muted);margin-top:10px}
+    .cta{margin-top:16px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 8px 18px rgba(255,122,89,0.2)}
+    .btn.alt{background:transparent;color:var(--accent);border:1px solid rgba(255,122,89,0.18)}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:22px}
+    .card{background:var(--card);backdrop-filter:blur(6px);border-radius:14px;padding:18px;box-shadow:0 8px 22px rgba(12,12,12,0.06);display:flex;flex-direction:column;gap:14px}
+    .card h3{margin:0;font-size:18px}
+    .price{font-weight:800;color:#222}
+    .ingredients{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+    .ingredient{background:rgba(255,255,255,0.6);padding:8px 10px;border-radius:10px;font-weight:500}
+    .tag{display:inline-block;padding:6px 10px;border-radius:10px;background:rgba(0,0,0,0.04);font-size:13px}
+
+    footer{margin-top:28px;padding:18px;border-radius:12px;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <h1>Manjar</h1>
+          <p class="lead">Las 3 comidas más ricas — hechas con amor</p>
+        </div>
+      </div>
+      <nav>
+        <a class="tag" href="#productos">Ver productos</a>
+      </nav>
+    </header>
+
+    <section class="hero" role="banner">
+      <div class="hero-left">
+        <h2>Bienvenido a Manjar — sabor que enamora</h2>
+        <p>Prueba nuestras delicias: recetas caseras, ingredientes honestos y sabores que te transportan. Escoge tu favorito y haz tu pedido.</p>
+        <div class="cta">
+          <a class="btn" href="#productos">Ver manjares</a>
+          <a class="btn alt" href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1542444459-db71c0d2d75e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c7a8f915794a2d1e5c4e9d3f6f016c1" alt="postres manjar" style="width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08)">
+      </div>
+    </section>
+
+    <main id="productos">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px">
+        <h2 style="margin:0">Nuestros Manjares</h2>
+        <span class="tag">Calidad casera</span>
+      </div>
+
+      <div class="cards">
+        <!-- Producto 1 -->
+        <article class="card">
+           <img src="img/descarga.jpg" alt="Arroz con leche" style="width:100%;border-radius:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3>Arroz con leche</h3>
+            <div class="price">10.000 COP</div>
+          </div>
+          <div class="ingredients">
+            <div class="ingredient">Queso rallado</div>
+            <div class="ingredient">Leche condensada</div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px;">
+            <a class="btn" href="#contacto">Pedir</a>
+            <a class="btn alt" href="#">Más info</a>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="card">
+           <img src="img/descarga (4).jpg" alt="Arroz con leche" style="width:100%;border-radius:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3>Salpicón</h3>
+            <div class="price">10 COP</div>
+          </div>
+          <div class="ingredients">
+            <div class="ingredient">Mango</div>
+            <div class="ingredient">Piña</div>
+            <div class="ingredient">Papaya</div>
+            <div class="ingredient">Fresa</div>
+            <div class="ingredient">Banano</div>
+            <div class="ingredient">Manzana roja</div>
+            <div class="ingredient">Leche condensada</div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px;">
+            <a class="btn" href="#contacto">Pedir</a>
+            <a class="btn alt" href="#">Más info</a>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="card">
+           <img src="img/descarga (1).jpg" alt="Arroz con leche" style="width:100%;border-radius:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3>Postres (milo 3 leches)</h3>
+            <div class="price">15.000 COP</div>
+          </div>
+          <div class="ingredients">
+            <div class="ingredient">Milo</div>
+            <div class="ingredient">Leche (varias: 3 leches)</div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px;">
+            <a class="btn" href="#contacto">Pedir</a>
+            <a class="btn alt" href="#">Más info</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <section id="contacto" style="margin-top:22px;display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
+      <div style="background:var(--glass);padding:18px;border-radius:12px">
+        <h3 style="margin-top:0">Haz tu pedido</h3>
+        <p class="lead">Escribe tu pedido y te responderemos por WhatsApp o llama al número.</p>
+        <form onsubmit="event.preventDefault();alert('Gracias! Tu pedido ha sido enviado (simulado).')" style="display:flex;flex-direction:column;gap:10px">
+          <input placeholder="Nombre" required style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+          <input placeholder="Teléfono" required style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+          <textarea placeholder="Tu pedido (ej: 2 Arroz con leche)" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)"></textarea>
+          <div style="display:flex;gap:8px">
+            <button class="btn" type="submit">Enviar pedido</button>
+            <a class="btn alt" href="https://wa.me/3245581099" target="_blank">Abrir WhatsApp</a>
+          </div>
+        </form>
+      </div>
+
+      <aside style="background:linear-gradient(180deg,#fff,#fffefc);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.03)">
+        <h4 style="margin:0 0 8px 0">Información</h4>
+        <p style="margin:0 0 8px 0;color:var(--muted)">Precios mostrados en pesos colombianos (COP). Entregas bajo pedido. Pregunta por presentaciones y descuentos por cantidad.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+          <span class="tag">Casero</span>
+          <span class="tag">Fresco</span>
+          <span class="tag">Sabor auténtico</span>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © Manjar — Hecho con cariño • Diseñado para mostrar tus delicias
+    </footer>
+  </div>
+</body>
+</html>
